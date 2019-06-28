@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        // <!-- 一般object的键值对的键是以字符串的形式，map可以使用对象或者数组作为键 -->
+        let map = new Map(); //Map作为构造函数
+        const p = {
+            p: "hello"
+        };
+        map.set(p, 'content');
+        map.get(p);
+        map.has(p); // has map中是否有这个元素
+        console.log(map.get(p));
+        map.delete(p);
+        console.log(map.has(p));
+
+        // map也可以接受数组作为参数
+        let m = new Map([
+            ['title', '今天真开心'],
+            ['content', '00000']
+        ]);
+        m.get('title');
+        console.log(m.size); //获取大小
+        console.log(m.get('title')); // 获取某个参数的值
+    </script>
+
+</body>
+
+</html>
