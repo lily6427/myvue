@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div class="app">
+        日期： <input type="text" v-model.lazy='msg'> 结果：{{msg | formate}}
+    </div>
+    <script src="./js/vue.js"></script>
+    <script>
+        // 全局过滤器 不传参数的过滤器
+        Vue.filter('formate', function(val) {
+
+            if (val != '') {
+                let year = val.substr(0, 4);
+                let morth = val.substr(4, 2);
+                let date = val.substr(6, 2);
+                return year + '-' + morth + '-' + date;
+            }
+
+        })
+        const v = new Vue({
+            el: ".app",
+            data: {
+                msg: ''
+            }
+        });
+    </script>
+</body>
+
+</html>
