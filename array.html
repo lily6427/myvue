@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        // Array.from方法用于将两类对象转为真正的数组：类似数组的对象（array-like object）和可遍历（iterable）的对象（包括 ES6 新增的数据结构 Set 和 Map）。
+
+        // 下面是一个类似数组的对象，Array.from将它转为真正的数组。
+        let arr = {
+            "0": "liuli",
+            "1": "xiejiao",
+            "2": "liuziyao",
+            length: 3 //必须写这个长度
+        }
+        let arrNew = Array.from(arr);
+        console.log(arrNew);
+    </script>
+</body>
+
+</html>
